@@ -31,7 +31,7 @@ app.get('/',(req,res)=>{
 
 app.post('/api/predict',async(req,res)=>{
     console.log(req.body);
-    const url = 'http://127.0.0.1:8000/predict';
+    const url = 'https://bofi-ml-server.onrender.com/predict';
     const response = await axios.post(url,req.body);
     console.log('====================================');
     console.log("response=>",response.data);
